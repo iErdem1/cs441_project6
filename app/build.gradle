@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
-        applicationId "com.dreamogrammers.sunnat629.hellotwitter"
+        applicationId "com.dreamogrammers.ihsanerdem.hellotwitter"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
