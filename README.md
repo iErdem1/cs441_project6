@@ -1,5 +1,5 @@
-# Project 5 
-- Binghamton University Spring 2019 CS441 Gaming for Mobile Platform class "???" project.
+# Project 6
+- Binghamton University Spring 2019 CS441 Gaming for Mobile Platform class "Twitter API Android" project.
 
 ## LICENCE
 
@@ -28,10 +28,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 - Clone project from Git
 - Setup virtualenv <code>virtualenv venv ... </code>
 - Activate virtualenv <code>source venv/bin/activate</code>
-- Build the code!
+- Create an Twitter application and get API key and API secret key. Our keys hided couse of security concerns.
+- Set your gradle environment.
+- Install dependencies and acces your kvm grunts.
+- Build the code on Android Studio.
 
 
 
 ## Project Description
-- Description section will be updated.
+- This is a basic Android project based on Twitter API.
+- Application access and send requests some Twitter API endpoints and return some results from registered twitter account.
+- If you use your correct API key, you can access infos about your personal account.(Sign In required!)
 - If you have any questions or curiosities do not hesitate a sending a note via `ihsan@itugnu.org` or `igokce1@binghamton.edu`
