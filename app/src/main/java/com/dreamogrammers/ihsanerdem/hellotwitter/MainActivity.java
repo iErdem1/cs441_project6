@@ -60,4 +60,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+private void loadTwitterAPI(long userID) {
+        new MyTwitterApiClient(session).getCustomService().show(userID)
+                .enqueue(new Callback<User>() {
+                    @Override
+                    public void success(Result<User> result) {
+                        ((TextView) findViewById(R.id.display)).setText(
+                                "Name: "+result.data.name
+                                        +"\nLocation: "+result.data.location
+                                        +"\nFriends: "+result.data.friendsCount
+                        );
+                        Picasso.with(getBaseContext()).load(result.data.profileImageUrl).
+                                resize(250,250)
+                                .into((ImageView)findViewById(R.id.imageView));
+                    }
+
+                    @Override
+                    public void failure(TwitterException exception) {
+                        Log.e("Failed", exception.toString());
+                    }
+                });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Pass the activity result to the login button.
+        loginButton.onActivityResult(requestCode, resultCode, data);
+    }
 }
